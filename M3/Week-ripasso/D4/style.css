@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* SQUARE ANIMATIONS */
+/* .square {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    animation: leftToRight 1s linear infinite; FROM LEFT TO RIGHT
+    animation: rotate 1s linear forwards; ROTATE 360° AND TRANSLATE DX
+}
+
+@keyframes leftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(0)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(100vw);
+    }
+} 
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: translateX(300px)
+    }
+} */
+
+/* NAVBAR CHE COMPAIA DALL'ALTO, DA SX ENTRA IL LOGO, DA DX ENTRANO 5 LINK UNO DOPO L'ALTRO */
+.navbar {
+    height: 100px;
+    background-color: #5BA5B7;
+    display: flex;
+    justify-content: space-between;
+    animation: navAnimation 1s linear forwards;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    font-family: "Indie Flower", cursive;
+}
+
+@keyframes navAnimation {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav img {
+    opacity: 0;
+    padding: 5px;
+    border-radius: 50%;
+    animation: navLogoAnimation 1s linear 1s forwards;
+}
+
+@keyframes navLogoAnimation {
+    from {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-menu {
+    padding: 5px;
+}
+
+.nav-menu a {
+    color: #D5E5ED;
+    text-decoration: none;
+    opacity: 0;
+    display: inline-block; /* per poter usare la proprietà transform gli elementi devono potersi muovere all'interno del loro blocco */
+    animation: linkAnimation 1s ease-in-out 2s forwards;
+}
+
+.nav-menu a:nth-child(2) {
+    animation: linkAnimation 1s ease-in-out 3s forwards;
+}
+
+.nav-menu a:nth-child(3) {
+    animation: linkAnimation 1s ease-in-out 4s forwards;
+}
+
+.nav-menu a:nth-child(4) {
+    animation: linkAnimation 1s ease-in-out 5s forwards;
+}
+
+.nav-menu a:nth-child(5) {
+    animation: linkAnimation 1s ease-in-out 6s forwards;
+}
+
+@keyframes linkAnimation {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/* HIDE NAVBAR WHEN I SCROLL DOWN */
+.hideNavbar {
+    animation: hideNavAnimation 1s linear forwards;
+}
+
+@keyframes hideNavAnimation {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: -100px;
+        opacity: 0;
+    }
+}
+
+main {
+    height: 100vh;
+}
+
+main p {
+    font-size: 12px;
+}
