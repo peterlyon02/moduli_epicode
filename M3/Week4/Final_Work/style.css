@@ -30,7 +30,6 @@ main{
 .container_main{
     display: flex;
     width: 100%;
-    border: 1px solid purple;
     align-items: center;
 }
 .container_TV{
@@ -50,15 +49,29 @@ main{
 }
 
 .image_container{
-    overflow: hidden;
+   overflow: hidden;
+    
 }
 
 .hover-zoom{
     transition: trasform 0.3 ease;
+    height: 30%;
+    width: 100%;
 }
 
 .hover-zoom:hover{
     transform: scale(1.1);
 }
+
+.row_style{
+    margin-bottom: 1.9%;
+    overflow-x: auto;
+}
+
+.row_title{
+    margin-bottom: 0.5%
+}
+
+
 
 
