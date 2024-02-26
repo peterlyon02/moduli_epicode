@@ -1,7 +1,7 @@
 function createRows(){
     let list=['Trending Now', 'Watch It Again', 'New Releases'];
                 let i=0;
-                
+                let j=0;
                 while(i<list.length){
                     var div_main=document.getElementById('div_main');
                     var row_title=document.createElement('div');
@@ -17,8 +17,8 @@ function createRows(){
 
                     var rowContainer = document.createElement('div');
                     rowContainer.classList.add('row', 'row_style');
-                    let j=0;
-                    while(j<18){
+                    let cont=j
+                    while(j<cont+6){
                         var col= document.createElement('div');
                         col.classList.add('col-2');
                         var imageContainer=document.createElement('div')
